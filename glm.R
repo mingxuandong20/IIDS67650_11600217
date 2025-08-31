@@ -455,7 +455,7 @@ glm_model6 <- glm(
   family = binomial, data = train_data_mar2_cc
 )
 summary(glm_model6)
-##模型预测Model prediction
+##Model prediction
 glm_pred6 <- predict(glm_model6, newdata = test_data, type = "response")
 
 ###calibration
@@ -497,4 +497,5 @@ names(scores_mar) <- names(preds_mar)
 
 ##View AUC / Brier
 lapply(scores_mar, function(sc) sc$AUC)
+
 lapply(scores_mar, function(sc) sc$Brier)
